@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SL BIS Customer Care Solutions</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f5f5f5;
+        }
+        h1 {
+            color: #333;
+        }
+        .container {
+            display: flex;
+            width: 100%;
+            max-width: 1200px;
+        }
+        .background-container {
+            background-image: url(https://media.licdn.com/dms/image/D560BAQFhWwfIzl2WLQ/company-logo_200_200/0/1711024330436?e=2147483647&v=beta&t=hqP01R8O6hBOCavIiXiq0tUCXKtBXwOhFRyHAoQAcB8); /* Set your background image URL here */
+            background-size: cover; /* Ensure the image covers the entire container */
+            background-position: center; /* Center the image */
+
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-gap: 20px;
+            flex: 3;
+        }
+        .app {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            background: white;
+            padding: 10px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s;
+        }
+        .app a {
+            text-decoration: none;
+            color: #333;
+            font-size: 1.2em;
+            margin: 10px 0;
+        }
+        .app:hover {
+            transform: scale(1.05);
+        }
+        .sidebar {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            background: white;
+            padding: 20px;
+            margin-left: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .sidebar h2 {
+            font-size: 1.5em;
+            margin-bottom: 20px; /* Reduced space between title and date */
+            color: black;
+        }
+        .clock {
+            font-size: 2em;
+            margin-bottom: 20px;
+            color: maroon;
+        }
+        .date {
+            font-size: 1.5em;
+            margin-bottom: 20px; /* Reduced space */
+            color: maroon;
+        }
+        .calendar {
+            width: 100%;
+            max-width: 60px; /* Further reduced size */
+            margin-top: 20px;
+            display: flex;
+            justify-content: center; /* Center the calendar */
+        }
+        .calendar table {
+            border-collapse: collapse;
+        }
+        .calendar th, .calendar td {
+            padding: 2px; /* Further reduced padding */
+            border: 1px solid #ddd;
+            text-align: center;
+            font-size: 0.8em; /* Reduced font size */
+        }
+        .calendar th {
+            background-color: #f2f2f2;
+        }
+        .calendar td.today {
+            background-color: maroon;
+            color: white;
+        }
+        .calendar td.sunday {
+            color: red;
+        }
+        .centered {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .motto {
+            margin-top: 20px;
+            font-size: 0.9em; /* Smaller font size */
+            color: #333;
+            font-style: italic;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div id="auth-section" class="container">
+        <div>
+            <h1>SL BIS Customer Care Solutions</h1>
+            <label for="password">Enter the password:</label>
+            <input type="password" id="password" placeholder="Password">
+            <button onclick="authenticate()">Login</button>
+        </div>
+    </div>
+    <div id="dashboard" class="container" style="display:none;">
+        <div class="grid">
+            <div class="app">
+                <a href="https://business.google.com" target="_blank">Business Manager</a>
+            </div>
+            <div class="app">
+                <a href="https://play.google.com" target="_blank">Apps</a>
+            </div>
+            <div class="app">
+                <a href="https://mail.google.com" target="_blank">Email</a>
+            </div>
+            <div class="app">
+                <a href="https://meet.google.com" target="_blank">Google Meet</a>
+            </div>
+            <div class="app">
+                <a href="https://web.whatsapp.com" target="_blank">WhatsApp Business</a>
+            </div>
+            <div class="app">
+                <a href="https://contacts.google.com" target="_blank">Contacts</a>
+            </div>
+            <div class="app">
+                <a href="https://drive.google.com/drive/u/0/search?q=WS%20type:folder%20parent:0AMKfIGNxR9P9Uk9PVA" target="_blank">Work space</a>
+            </div>
+            <div class="app">
+                <a href="https://calendar.google.com" target="_blank">Calendar</a>
+            </div>
+            <div class="app">
+                <a href="https://photos.google.com" target="_blank">Photos</a>
+            </div>
+            <div class="app">
+                <a href="https://docs.google.com/spreadsheets/d/14RfKSi2m2UXCZN0kX0vJNGPWMDvEva_p03Sqbf0AiHk/edit?gid=0#gid=0" target="_blank">Finance</a>
+            </div>
+            <div class="app">
+                <a href="https://keep.google.com" target="_blank">Basics</a>
+            </div>
+            <div class="app">
+                <a href="https://www.google.com/save" target="_blank">Insighths</a>
+            </div>
+            <div class="app">
+                <a href="https://drive.google.com/drive/u/0/folders/131g8_SotS7j0Alw7jffMfJxW3PmxhIv3" target="_blank">The Team</a>
+            </div>
+            <div class="app">
+                <a href="https://docs.google.com/spreadsheets/d/1apVrc3s246IyRfp8u6Yj7YxTQEqoOZTUy8NKrnpsy14/edit?gid=494867224#gid=494867224" target="_blank">Dashboards</a>
+            </div>
+            <div class="app">
+                <a href="https://facebook.com" target="_blank">FB</a>
+            </div>
+            <div class="app">
+                <a href="https://linkedin.com/feed/" target="_blank">Linkedin</a>
+            </div>
+            <div class="app">
+                <a href="https://chatgpt.com" target="_blank">ChatGPT</a>
+            </div>
+            <div class="app">
+                <a href="https://ride-life-test.odoo.com/odoo?cids=1" target="_blank">Odoo T</a>
+            </div>
+            <div class="app">
+                <a href="https://www.youtube.com/@SLBISSCHOOL" target="_blank">YouTube</a>
+            </div>
+            <div class="app">
+                <a href="https://www.tiktok.com/@sl_bis_school" target="_blank">TikTok</a>
+            </div>
+            <div class="app">
+                <a href="https://www.instagram.com/sl_bis_school/" target="_blank">Instagram</a>
+            </div>
+            <div class="app">
+                <a href="https://skmjcdev-lumala-erp.odoo.com/web#action=menu&cids=2&menu_id=395" target="_blank">Odoo </a>
+            </div>
+            <div class="app">
+                <a href="https://www.canva.com/" target="_blank">Canva</a>
+            </div>
+            <div class="app">
+                <a href="https://account.proton.me/login" target="_blank">Proton mail</a>
+            </div>
+        </div>
+        <div class="sidebar">
+            <h2>SL BIS Customer Care Solutions</h2>
+            <div class="centered">
+                <div class="clock" id="clock"></div>
+                <div class="date" id="date"></div>
+                <div class="calendar" id="calendar"></div>
+                <div class="motto"><strong><em>Quality Work Continuously on Well-Planned Processes</em></strong></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const correctPassword = '1234aaaa'; // Password for access
+
+        function authenticate() {
+            const password = document.getElementById('password').value;
+            if (password === correctPassword) {
+                document.getElementById('auth-section').style.display = 'none';
+                document.getElementById('dashboard').style.display = 'flex';
+            } else {
+                alert('Incorrect password. Please try again.');
+            }
+        }
+
+        function updateTime() {
+            const now = new Date();
+            const hours = String(now.getHours()).padStart(2, '0');
+            const minutes = String(now.getMinutes()).padStart(2, '0');
+            const seconds = String(now.getSeconds()).padStart(2, '0');
+            const timeString = `${hours}:${minutes}:${seconds}`;
+            document.getElementById('clock').textContent = timeString;
+
+            const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+            const dateString = now.toLocaleDateString(undefined, options);
+            document.getElementById('date').textContent = dateString;
+        }
+
+        function generateCalendar() {
+            const now = new Date();
+            const year = now.getFullYear();
+            const month = now.getMonth();
+            const today = now.getDate();
+
+            const firstDay = (new Date(year, month, 1).getDay() + 6) % 7;
+            const daysInMonth = new Date(year, month + 1, 0).getDate();
+
+            const calendar = document.getElementById('calendar');
+            const monthNames = ["January", "February", "March", "April", "May", "June",
+                "July", "August", "September", "October", "November", "December"];
+
+            let calendarHtml = `<table>
+                                <tr><th colspan="7">${monthNames[month]} ${year}</th></tr>
+                                <tr>
+                                    <th>Mon</th><th>Tue</th><th>Wed</th><th>Thu</th>
+                                    <th>Fri</th><th>Sat</th><th>Sun</th>
+                                </tr>
+                                <tr>`;
+
+            for (let i = 0; i < firstDay; i++) {
+                calendarHtml += '<td></td>';
+            }
+
+            for (let day = 1; day <= daysInMonth; day++) {
+                const dayOfWeek = (firstDay + day - 1) % 7;
+                if (dayOfWeek === 6) { // Sunday
+                    calendarHtml += `<td class="sunday">${day}</td>`;
+                } else {
+                    calendarHtml += `<td${day === today ? ' class="today"' : ''}>${day}</td>`;
+                }
+                if (dayOfWeek === 6 && day !== daysInMonth) {
+                    calendarHtml += '</tr><tr>';
+                }
+            }
+
+            calendarHtml += '</tr></table>';
+            calendar.innerHTML = calendarHtml;
+        }
+
+        setInterval(updateTime, 1000);
+        updateTime(); // Initial call to display time immediately
+        generateCalendar(); // Initial call to generate calendar
+    </script>
+</body>
+</html>
